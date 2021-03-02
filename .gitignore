@@ -1,4 +1,5 @@
-venv/
-.idea/
-__pycache__/
-node_modules/
+/venv/
+/.idea/
+/__pycache__/
+/node_modules/
+db.sqlite3
