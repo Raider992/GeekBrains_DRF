@@ -20,6 +20,7 @@ class UsersTable extends Component {
 
 
     componentDidMount() {
+        console.log('componentDidMount')
         this.setState(() => {
             const users = fetchRequest('http://127.0.0.1:8000/api/authors');
             console.log(users)
@@ -36,7 +37,6 @@ class UsersTable extends Component {
     render() {
         return (
             <table>
-                {console.log(this.state.usersHeaders)}
                 <UsersHeaders fields={this.state.usersHeaders}/>
                 {this.state.users.map(user => {
                     <UserItem user={user} />

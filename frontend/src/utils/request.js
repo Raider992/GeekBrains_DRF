@@ -11,6 +11,7 @@ const fetchRequest = async (url, method='GET', data={}) => {
         },
         body: JSON.stringify(data)
     })
+    console.log(response.json())
     return await response.json()
 }
 
