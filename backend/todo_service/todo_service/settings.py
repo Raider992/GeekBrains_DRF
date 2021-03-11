@@ -132,5 +132,5 @@ AUTH_USER_MODEL = 'authapp.User'
 LOGIN_URL = '/auth/login'
 
 CORS_ALLOWED_ORIGINS = [
-    'http:localhost:3000'
+    'http://localhost:3000'
 ]
