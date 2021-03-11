@@ -21,7 +21,7 @@ class UsersTable extends Component {
 
     componentDidMount() {
         this.setState(() => {
-            const users = fetchRequest('user.json'); //Не забыть поменять на верный
+            const users = fetchRequest('http://127.0.0.1:8000/api/authors'); //Не забыть поменять на верный
             const usersHeaders = Object.keys(users[0]);
             return {
                 users: users,
