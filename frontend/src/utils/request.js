@@ -14,4 +14,4 @@ const fetchRequest = async (url, method='GET', data={}) => {
     return await response.json()
 }
 
-export default fetchRequest()
+export default fetchRequest

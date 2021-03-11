@@ -25,17 +25,21 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'public/'),
-        publicPath: "/public/",
+        path: path.resolve(__dirname, './dist/'),
+        publicPath: "/dist/",
         filename: "bundle.js"
     },
 
     devServer: {
-        contentBase: path.join(__dirname, 'public/'),
+        contentBase: path.join(__dirname, './dist'),
         port: 3000,
-        publicPath: 'http://localhost:3000',
-        hotOnly: true
+        hot: true
     },
 
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new webpack.HotModuleReplacementPlugin({
+            template: path.join(__dirname + "/dist/index.html"),
+            inject: 'body'
+        })
+    ]
 };
