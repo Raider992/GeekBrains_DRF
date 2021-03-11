@@ -9,7 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader"
             },
@@ -25,15 +25,15 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'dist/'),
-        publicPath: "/dist/",
+        path: path.resolve(__dirname, 'public/'),
+        publicPath: "/public/",
         filename: "bundle.js"
     },
 
     devServer: {
         contentBase: path.join(__dirname, 'public/'),
-        port: 3030,
-        publicPath: 'http://localhost:3030/dist/',
+        port: 3000,
+        publicPath: 'http://localhost:3000',
         hotOnly: true
     },
 
